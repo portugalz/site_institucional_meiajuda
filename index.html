@@ -4,52 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeIAjuda - Home</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <!-- Adicionar o CSS do Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/7.5.4/swiper-bundle.min.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ed;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Estilos do header */
+        header {
+            background-color: #47b874;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 40px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e6f7ed;
+        }
+
+        /* Estilos do main */
+        main {
+            padding: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #47b874;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 14px;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #47b874;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .cta:hover {
+            background-color: #35a363;
+        }
+
+        /* Estilos do footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Estilos adicionais */
+        .destaca-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .destaca-item {
+            text-align: center;
+            margin-bottom: 15px;
+            width: 30%; /* Reduzindo a largura */
+        }
+
+        .destaca-item img {
+            width: 60px;
+            height: auto;
+        }
+
+        .destaca-item p {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .testimonial-carousel {
+            margin-top: 20px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="medica">
-        <img src="imagens/medica.png" alt="Imagem de uma médica">
-    </div>
     <header>
-        <div class="logo">
-            <img src="imagens/logo.png" alt="Logo do MeIAjuda" width="179.4" height="174.6">
-        </div>
-        <nav>
-            <div class="menu-toggle">
-                <div class="menu-icon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/logo.png" alt="Logo do MeIAjuda">
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#diferencial">Diferencial</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="diferencial.html">Diferencial</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="home">
-            <h1>Bem-vindo ao MeIAjuda</h1>
-            <p>Estamos desenvolvendo uma solução para melhorar o acesso à saúde para a população de Recife e proximidades.</p>
-            <a href="#sobre" class="cta">Saiba Mais</a>
+            <div class="container">
+                <h1>Bem-vindo ao MeIAjuda</h1>
+                <p>Estamos desenvolvendo uma solução para melhorar o acesso à saúde para a população de Recife e proximidades.</p>
+                <a href="#sobre" class="cta">Saiba Mais</a>
+            </div>
         </section>
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Informações sobre a equipe e a missão do projeto.</p>
-            <a href="sobre.html" class="cta">Leia mais</a>
-        </section>
-        <section id="diferencial">
-            <h2>Diferencial</h2>
-            <p>Detalhes sobre o que torna nosso projeto único.</p>
-            <a href="diferencial.html" class="cta">Veja Mais</a>
-        </section>
-        <!--<section id="oque-nos-destaca">-->
+        <section>
             <h2>O QUE NOS DESTACA</h2>
             <div class="destaca-container">
                 <div class="destaca-item">
@@ -68,16 +196,6 @@
                     <p>Texto sobre o diferencial 3 aqui.</p>
                 </div>
             </div>
-        </section>
-        <section id="equipe">
-            <h2>Nossa Equipe</h2>
-            <p>Informações sobre os membros da equipe.</p>
-            <a href="equipe.html" class="cta">Conheça a Equipe</a>
-        </section>
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Formulário para contato.</p>
-            <a href="contato.html" class="cta">Entre em Contato</a>
         </section>
         <section id="depoimentos">
             <h2>Depoimentos</h2>
@@ -111,9 +229,10 @@
         
     </main>
     <footer>
-        <p>© 2024 MeIAjuda. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>© 2024 MeIAjuda. Todos os direitos reservados.</p>
+        </div>
     </footer>
-    <!-- Adicionar o JavaScript do Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/7.5.4/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>

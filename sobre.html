@@ -3,8 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeIAjuda - Sobre</title>
+    <title>MeIAjuda - Sobre Nós</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body {
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos adicionais para os novos tópicos */
+        .sobre-topico {
+            margin-bottom: 20px;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        .sobre-topico h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sobre-topico p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 0 10px;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-links {
+                display: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .nav-links li:last-child {
+                margin-bottom: 0;
+            }
+
+            .nav-links.active {
+                display: block;
+            }
+        }
+
+        /* Estilo para o botão de voltar */
+        .voltar-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .voltar-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,10 +128,30 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Sobre Nós</h1>
-            <p>Informações sobre a equipe e a missão do projeto.</p>
-        </section>
+        <div class="sobre-topico">
+            <section>
+                <h2>Como surgiu o MeIAjuda</h2>
+                <p>O MeIAjuda surgiu da necessidade de fornecer acesso rápido e confiável a informações sobre cuidados básicos de saúde. Com o avanço da tecnologia e a crescente demanda por soluções inovadoras na área da saúde, percebemos a oportunidade de utilizar inteligência artificial para oferecer orientações precisas e úteis para o público em geral.</p>
+            </section>
+        </div>
+
+        <div class="sobre-topico">
+            <section>
+                <h2>Por que utilizar o MeIAjuda</h2>
+                <p>O MeIAjuda oferece uma maneira conveniente e acessível de obter informações sobre cuidados básicos de saúde. Nossa inteligência artificial está sempre disponível para responder às suas perguntas, fornecer orientações de autocuidado e ajudá-lo a tomar decisões informadas sobre sua saúde. Além disso, nosso serviço é gratuito e pode ser acessado a qualquer momento, de qualquer lugar.</p>
+            </section>
+        </div>
+
+        <div class="sobre-topico">
+            <section>
+                <h2>Combate a desinformação sobre doenças</h2>
+                <p>Um dos principais objetivos do MeIAjuda é combater a desinformação sobre doenças. Com a proliferação de informações falsas e imprecisas na internet, é essencial contar com fontes confiáveis de informação. Nosso sistema utiliza dados atualizados e fontes confiáveis para garantir que você receba informações precisas e confiáveis sobre saúde, ajudando a reduzir o impacto da desinformação na sociedade.</p>
+            </section>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="voltar-button" onclick="javascript:history.back()">Voltar</button>
+        </div>
     </main>
     <footer>
         <p>© 2024 MeIAjuda. Todos os direitos reservados.</p>
