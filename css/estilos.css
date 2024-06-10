@@ -1,9 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #71C4A8;
-    color: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #71C4A8; /* Alterei o fundo para um tom de verde-água */
+    color: #333; /* Cor padrão do texto */
 }
 
 header {
@@ -27,8 +35,6 @@ header {
     height: 100%;
     object-fit: contain;
 }
-
-
 
 nav ul {
     list-style: none;
@@ -94,7 +100,6 @@ nav ul li a {
     padding: 0.5em;
 }
 
-/* Restante do CSS */
 main {
     padding: 2em;
 }
@@ -110,43 +115,15 @@ footer {
     font-size: 0.8em;
 }
 
-h1 {
+h1, h2 {
     color: #4CAF50;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
+section {
+    background: rgba(255, 255, 255, 0.9);
     padding: 1em;
+    margin: 1em 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 0.5em 1em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
 }
 
 .medica {
@@ -162,4 +139,150 @@ form button {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #45a049;
+}
+
+/* Estilos específicos para o carrossel */
+.destaca-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.destaca-item {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Transparência leve */
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.destaca-item img {
+    margin-bottom: 1em;
+}
+
+.destaca-item p {
+    margin: 0.5em 0;
+}
+
+/* Estilos específicos para o carrossel de depoimentos */
+.testimonial-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.swiper-slide {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.testimonial-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.testimonial-author {
+    font-size: 14px;
+}
+
+.testimonial-author .name {
+    font-weight: bold;
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #007bff;
 }

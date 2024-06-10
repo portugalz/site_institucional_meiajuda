@@ -1,34 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona o botão de toggle do menu
     const menuToggle = document.querySelector('.menu-toggle');
-    // Seleciona a lista de links de navegação
     const navLinks = document.querySelector('.nav-links');
-    // Seleciona o botão de boas-vindas (caso exista)
-    const welcomeBtn = document.getElementById('welcome-btn');
-    // Seleciona a mensagem de boas-vindas (caso exista)
-    const welcomeMessage = document.getElementById('welcome-message');
-    // Seleciona o botão de fechar na mensagem de boas-vindas (caso exista)
-    const closeBtn = document.getElementById('close-btn');
+    const navItems = document.querySelectorAll('.nav-links a');
 
-    // Adiciona um evento de clique ao botão de toggle do menu
     menuToggle.addEventListener('click', function() {
-        // Alterna a classe 'active' na lista de links de navegação
         navLinks.classList.toggle('active');
     });
 
-    // Verifica se o botão de boas-vindas existe antes de adicionar o evento de clique
-    if (welcomeBtn) {
-        welcomeBtn.addEventListener('click', function() {
-            // Mostra a mensagem de boas-vindas
-            welcomeMessage.classList.remove('hidden');
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            const targetId = item.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+                navLinks.classList.remove('active');
+            }
         });
-    }
+    });
 
-    // Verifica se o botão de fechar existe antes de adicionar o evento de clique
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            // Esconde a mensagem de boas-vindas
-            welcomeMessage.classList.add('hidden');
-        });
-    }
+    // Inicialização do Swiper para o carrossel de depoimentos
+    let swiperDepoimentos = new Swiper('.testimonial-carousel .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });

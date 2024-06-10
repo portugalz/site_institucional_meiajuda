@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeIAjuda - Home</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- Adicionar o CSS do Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/7.5.4/swiper-bundle.min.css">
 </head>
 <body>
     <div class="medica">
@@ -23,28 +25,96 @@
                 </div>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="diferencial.html">Diferencial</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#diferencial">Diferencial</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="home">
             <h1>Bem-vindo ao MeIAjuda</h1>
             <p>Estamos desenvolvendo uma solução para melhorar o acesso à saúde para a população de Recife e proximidades.</p>
-            <button id="welcome-btn">Mostrar Mensagem de Boas-vindas</button>
-            <div id="welcome-message" class="hidden">
-                <p>Olá! Seja bem-vindo ao MeIAjuda.</p>
-                <button id="close-btn">Fechar</button>
+            <a href="#sobre" class="cta">Saiba Mais</a>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Informações sobre a equipe e a missão do projeto.</p>
+            <a href="sobre.html" class="cta">Leia mais</a>
+        </section>
+        <section id="diferencial">
+            <h2>Diferencial</h2>
+            <p>Detalhes sobre o que torna nosso projeto único.</p>
+            <a href="diferencial.html" class="cta">Veja Mais</a>
+        </section>
+        <!--<section id="oque-nos-destaca">-->
+            <h2>O QUE NOS DESTACA</h2>
+            <div class="destaca-container">
+                <div class="destaca-item">
+                    <img src="https://cespu.com.br/wp-content/uploads/2022/09/noun-international-4122281-1.svg" alt="Mobilidade internacional" width="80" height="80">
+                    <p><strong>Diferencial 1</strong></p>
+                    <p>Texto sobre o diferencial 1 aqui.</p>
+                </div>
+                <div class="destaca-item">
+                    <img src="https://cespu.com.br/wp-content/uploads/2022/09/noun-lab-4832711-1.svg" alt="Laboratórios especializados" width="80" height="80">
+                    <p><strong>Diferencial 2</strong></p>
+                    <p>Texto sobre o diferencial 2 aqui.</p>
+                </div>
+                <div class="destaca-item">
+                    <img src="https://cespu.com.br/wp-content/uploads/2022/09/noun-best-5117421-1.svg" alt="Inovação reconhecida em Portugal" width="80" height="80">
+                    <p><strong>Diferencial 3</strong></p>
+                    <p>Texto sobre o diferencial 3 aqui.</p>
+                </div>
             </div>
         </section>
+        <section id="equipe">
+            <h2>Nossa Equipe</h2>
+            <p>Informações sobre os membros da equipe.</p>
+            <a href="equipe.html" class="cta">Conheça a Equipe</a>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Formulário para contato.</p>
+            <a href="contato.html" class="cta">Entre em Contato</a>
+        </section>
+        <section id="depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="testimonial-carousel swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                            <footer>João Silva</footer>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                            <footer>Maria Souza</footer>
+                        </blockquote>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                            <footer>Carlos Oliveira</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Adicionar navegação e paginação -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        
     </main>
     <footer>
         <p>© 2024 MeIAjuda. Todos os direitos reservados.</p>
     </footer>
+    <!-- Adicionar o JavaScript do Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/7.5.4/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
