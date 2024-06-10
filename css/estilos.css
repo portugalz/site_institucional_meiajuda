@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #71C4A8;
+    color: #FFFFFF;
 }
 
 header {
@@ -13,6 +13,22 @@ header {
     text-align: center;
     position: relative;
 }
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 179.4px;
+    height: 174.6px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
 
 nav ul {
     list-style: none;
@@ -87,10 +103,11 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.5em 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 0.8em;
 }
 
 h1 {
@@ -130,4 +147,19 @@ form button {
 
 .hidden {
     display: none;
+}
+
+.medica {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.medica img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
